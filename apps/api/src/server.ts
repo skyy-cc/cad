@@ -166,7 +166,7 @@ export class Server {
       return res
         .status(200)
         .send(
-          `<html><head><title>SnailyCAD API</title></head><body>200 Success. Current CAD Version: ${versions?.currentVersion} - ${versions?.currentCommitHash}</body></html>`,
+          `<html><head><title>MTDOJRP API</title></head><body>200 Success. Current CAD Version: ${versions?.currentVersion} - ${versions?.currentCommitHash}</body></html>`,
         );
     };
   }
