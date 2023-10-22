@@ -75,11 +75,11 @@ if (process.env.NODE_ENV === "development") {
       specVersion: "3.0.3",
       spec: {
         info: {
-          title: "SnailyCAD API Documentation",
+          title: "API Documentation",
           version: "0.0.0",
           contact: {
-            name: "SnailyCAD Community Discord",
-            url: "https://discord.gg/eGnrPqEH7U",
+            name: "MTDOJRP Discord",
+            url: "https://discord.gg/vBymThYS88",
           },
         },
       },

@@ -52,7 +52,7 @@
     "speechVoice": "Speech Voice",
     "otherSounds": "Other Sounds",
     "unavailableSounds": "Unavailable Sounds",
-    "unavailableSoundsMessage": "These sounds are unavailable. They must be added by an admin.",
+    "unavailableSoundsMessage": "These sounds are unavailable to you!",
     "userApiTokenDescription": "This token can be used to communicate with SnailyCAD's API.",
     "developerMode": "Developer Mode",
     "statusViewDescription": "How the colour of a state code is displayed in the active units table."
