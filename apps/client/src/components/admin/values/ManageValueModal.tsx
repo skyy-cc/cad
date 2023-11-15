@@ -133,6 +133,7 @@ function createInitialValues(options: CreateInitialValuesOptions) {
     licenseType: value && isBaseValue(value) ? value.licenseType : null,
     isDefault: value && isBaseValue(value) ? value.isDefault : undefined,
     priority: value && isCallTypeValue(value) ? value.priority ?? undefined : undefined,
+    isDisposition: value && isCallTypeValue(value) ? value.isDisposition ?? undefined : undefined,
 
     officerRankImageId: "",
     officerRankDepartments:
@@ -151,7 +152,7 @@ function createInitialValues(options: CreateInitialValuesOptions) {
 
     extraFields:
       value && (isDivisionValue(value) || isDepartmentValue(value))
-        ? JSON.stringify(value.extraFields)
+        ? safelyStringifyJSON(value.extraFields)
         : "null",
 
     departmentLinks: value && isDepartmentValue(value) ? value.links ?? [] : [],
@@ -193,6 +194,11 @@ export function ManageValueModal({ onCreate, onUpdate, type, value }: Props) {
     values: typeof INITIAL_VALUES,
     helpers: FormikHelpers<typeof INITIAL_VALUES>,
   ) {
+    if (safelyParseJSON(values.extraFields) === false) {
+      helpers.setFieldError("extraFields", tValues("mustBeValidJson"));
+      return;
+    }
+
     const data = {
       ...values,
       whatPages: values.whatPages,
@@ -200,7 +206,7 @@ export function ManageValueModal({ onCreate, onUpdate, type, value }: Props) {
       divisions: values.divisions,
       officerRankDepartments: values.officerRankDepartments,
       trimLevels: values.trimLevels,
-      extraFields: JSON.parse(values.extraFields),
+      extraFields: safelyParseJSON(values.extraFields),
     };
 
     if (value) {
@@ -376,6 +382,17 @@ export function ManageValueModal({ onCreate, onUpdate, type, value }: Props) {
               />
             ) : null}
 
+            {type === ValueType.CALL_TYPE ? (
+              <SwitchField
+                name="isDisposition"
+                onChange={(value) => setFieldValue("isDisposition", value)}
+                isSelected={values.isDisposition}
+                description={tValues("isDispositionDescription")}
+              >
+                {tValues("isDisposition")}
+              </SwitchField>
+            ) : null}
+
             {type === ValueType.OFFICER_RANK ? (
               <>
                 <ImageSelectInput valueKey="officerRankImageId" image={image} setImage={setImage} />
@@ -437,4 +454,24 @@ export function ManageValueModal({ onCreate, onUpdate, type, value }: Props) {
       </Formik>
     </Modal>
   );
+}
+
+function safelyParseJSON(json: string) {
+  if (!json) return null;
+
+  try {
+    return JSON.parse(json);
+  } catch {
+    return false;
+  }
+}
+
+function safelyStringifyJSON(json: string | null) {
+  if (!json) return "null";
+
+  try {
+    return JSON.stringify(json, null, 4);
+  } catch {
+    return "null";
+  }
 }

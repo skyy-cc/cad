@@ -483,6 +483,7 @@ export const typeHandlers = {
           where: { id: String(id) },
           ...makePrismaData(ValueType.CALL_TYPE, {
             priority: item.priority,
+            isDisposition: item.isDisposition ?? false,
             value: item.value,
             isDisabled: item.isDisabled,
           }),
@@ -505,6 +506,7 @@ export const typeHandlers = {
         ...makePrismaData(ValueType.EMERGENCY_VEHICLE, {
           value: item.value,
           isDisabled: item.isDisabled,
+          extraFields: item.extraFields || undefined,
         }),
         include: valueInclude,
       });
