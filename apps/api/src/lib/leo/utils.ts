@@ -10,7 +10,7 @@ import {
 } from "@prisma/client";
 import type { INDIVIDUAL_CALLSIGN_SCHEMA } from "@snailycad/schemas";
 import { prisma } from "lib/data/prisma";
-import { ExtendedBadRequest } from "src/exceptions/extended-bad-request";
+import { ExtendedBadRequest } from "~/exceptions/extended-bad-request";
 import type { DisconnectOrConnect } from "lib/data/many-to-many";
 
 interface MaxDepartmentOptions {
@@ -63,14 +63,18 @@ export function getInactivityFilter<Prop extends string = "updatedAt">(
 
   property?: Prop,
 ): InactivityReturn<Prop> | null {
-  const inactivityTimeout = cad.miscCadSettings?.[type] ?? null;
+  let inactivityTimeoutInMinutes = cad.miscCadSettings?.[type] ?? null;
   const _prop = property ?? "updatedAt";
 
-  if (!inactivityTimeout) {
+  if (!inactivityTimeoutInMinutes) {
     return null;
   }
 
-  const milliseconds = inactivityTimeout * (1000 * 60);
+  if (inactivityTimeoutInMinutes < 10) {
+    inactivityTimeoutInMinutes = 10;
+  }
+
+  const milliseconds = inactivityTimeoutInMinutes * (1000 * 60);
   const updatedAt = new Date(new Date().getTime() - milliseconds);
 
   const filter = {
