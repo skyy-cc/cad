@@ -11,7 +11,7 @@ export function ReauthorizeSessionModal() {
     toastMessage({
       icon: "success",
       title: "Reauthorized",
-      message: "You have been reauthorized. You can now continue to use SnailyCAD.",
+      message: "You have been reauthorized. You can now continue to use the MTDOJRP CAD.",
     });
 
     modalState.closeModal(ModalIds.ReauthorizeSession);
