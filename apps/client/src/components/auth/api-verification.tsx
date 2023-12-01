@@ -134,6 +134,8 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
           </h1>
 
           <p className="font-medium leading-relaxed">
+            If you are seeing this error try reloading the page. If the issue persists, please contact staff.
+
             CAD was not able to connect to the MTDOJRP API. This means you will not be able
             to use the CAD unless you resolve this issue.
             <span className="my-2 block" />
@@ -188,7 +190,7 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
                   >
                     MTDOJRP API is accessible.
                   </a>{" "}
-                  (It should show your SnailyCAD version)
+                  (It should show your MTDOJRP API version)
                 </li>
 
                 <li>
@@ -223,7 +225,7 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
               <a
                 target="_blank"
                 className="font-semibold underline"
-                href="https://discord.gg/eGnrPqEH7U"
+                href="https://discord.com/invite/PkbPksdAqu"
                 rel="noreferrer"
               >
                 Discord Support Server
