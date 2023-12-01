@@ -31,11 +31,6 @@ const ConnectionsTab = dynamic(
   { ssr: false },
 );
 
-const UserApiTokenTab = dynamic(
-  async () => (await import("components/account/user-api-token-tab")).UserApiTokenTab,
-  { ssr: false },
-);
-
 interface Props {
   availableSounds: Record<Sounds, boolean>;
 }
@@ -87,7 +82,6 @@ export default function Account({ availableSounds }: Props) {
             <AccountInfoTab />
             <AccountSettingsTab />
             <AppearanceTab availableSounds={availableSounds} />
-            <UserApiTokenTab />
             {showConnectionsTab ? <ConnectionsTab /> : null}
           </TabList>
         </div>
