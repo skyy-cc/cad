@@ -67,7 +67,6 @@ export default function Account({ availableSounds }: Props) {
     { name: t("accountInfo"), value: "accountInfo" },
     { name: t("accountSettings"), value: "accountSettings" },
     { name: t("appearanceSettings"), value: "appearanceSettings" },
-    { name: t("userApiToken"), value: "userApiToken" },
   ];
 
   if (showConnectionsTab) {
