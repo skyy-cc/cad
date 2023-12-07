@@ -212,7 +212,6 @@ export function Manage911CallForm({ call, isDisabled, setShowAlert, handleClose 
               <FormRow useFlex>
 
                 <ValueSelectField
-                  isOptional
                   isDisabled={isDisabled}
                   isClearable
                   label={t("type")}
