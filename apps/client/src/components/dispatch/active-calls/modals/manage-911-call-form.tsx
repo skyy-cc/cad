@@ -210,29 +210,6 @@ export function Manage911CallForm({ call, isDisabled, setShowAlert, handleClose 
               </FormRow>
 
               <FormRow useFlex>
-                <ValueSelectField
-                  isOptional
-                  isDisabled={isDisabled}
-                  isClearable
-                  label={t("situationCode")}
-                  fieldName="situationCode"
-                  values={codes10.values}
-                  valueType={ValueType.CODES_10}
-                  filterFn={(value) => value.type === StatusValueType.SITUATION_CODE}
-                  className="w-full"
-                />
-
-                <ValueSelectField
-                  isOptional
-                  isDisabled={isDisabled}
-                  isClearable
-                  label={t("dispositionCode")}
-                  fieldName="dispositionCode"
-                  values={callType.values}
-                  valueType={ValueType.CALL_TYPE}
-                  filterFn={(value) => value.isDisposition}
-                  className="w-full"
-                />
 
                 <ValueSelectField
                   isOptional
