@@ -54,7 +54,7 @@
     "otherSounds": "Autres sons",
     "unavailableSounds": "Sons indisponibles",
     "unavailableSoundsMessage": "Ces sons ne sont pas disponibles. ",
-    "userApiTokenDescription": "Ce jeton peut être utilisé pour communiquer avec l'API de MTDOJRP.",
+    "userApiTokenDescription": "Ce jeton peut être utilisé pour communiquer avec l'API de KCDOJRP.",
     "developerMode": "Mode développeur"
   },
   "Notifications": {

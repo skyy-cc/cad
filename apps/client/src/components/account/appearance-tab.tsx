@@ -261,7 +261,7 @@ export function AppearanceTab({ availableSounds }: Props) {
                             className="mt-2 underline"
                             rel="noreferrer"
                             target="_blank"
-                            href="https://docs.mtdojrp.org/"
+                            href="https://docs.KCDOJRP.org/"
                           >
                             {t("unavailableSoundsMessage")}
                           </a>

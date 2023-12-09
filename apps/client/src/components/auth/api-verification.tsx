@@ -130,13 +130,13 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
         <div className="p-2 max-w-2xl">
           <h1 className="flex items-center gap-2 font-bold text-2xl mb-3">
             <ExclamationDiamondFill className="fill-red-400" />
-            Could not connect to the MTDOJRP API.
+            Could not connect to the KCDOJRP API.
           </h1>
 
           <p className="font-medium leading-relaxed">
             If you are seeing this error try reloading the page. If the issue persists, please contact staff.
 
-            CAD was not able to connect to the MTDOJRP API. This means you will not be able
+            CAD was not able to connect to the KCDOJRP API. This means you will not be able
             to use the CAD unless you resolve this issue.
             <span className="my-2 block" />
             CAD is designed to communicate to an API, which is hosted on a different URL. We
@@ -188,9 +188,9 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
                     className="text-blue-400 underline"
                     href={process.env.NEXT_PUBLIC_PROD_ORIGIN}
                   >
-                    MTDOJRP API is accessible.
+                    KCDOJRP API is accessible.
                   </a>{" "}
-                  (It should show your MTDOJRP API version)
+                  (It should show your KCDOJRP API version)
                 </li>
 
                 <li>
@@ -204,7 +204,7 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
                   </a>
                 </li>
                 <li>
-                  MTDOJRP API URL ends with <code>/v1</code>.
+                  KCDOJRP API URL ends with <code>/v1</code>.
                 </li>
               </ul>
               <span className="my-2 block" />

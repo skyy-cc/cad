@@ -18,7 +18,7 @@ interface Props {
 
 export function Title({ children, renderLayoutTitle = true, className }: Props) {
   const { cad } = useAuth();
-  const cadName = cad?.name ?? "MTDOJRP";
+  const cadName = cad?.name ?? "KCDOJRP";
 
   if (!children) {
     children = "SnailyCAD";

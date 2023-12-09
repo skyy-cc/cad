@@ -21,7 +21,7 @@ export async function registerDiscordRolesMetadata() {
     const body: RESTPutAPIApplicationRoleConnectionMetadataJSONBody = [
       {
         key: "cad_connected",
-        name: process.env.DISCORD_METADATA_CAD_CONNECTED_NAME || "MTDOJRP API Connected",
+        name: process.env.DISCORD_METADATA_CAD_CONNECTED_NAME || "KCDOJRP API Connected",
         description: "Whether the user has connected their CAD account to Discord.",
         type: ApplicationRoleConnectionMetadataType.BooleanEqual,
       },

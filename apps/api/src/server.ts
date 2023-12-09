@@ -80,7 +80,7 @@ if (process.env.NODE_ENV === "development") {
           title: "API Documentation",
           version: "0.0.0",
           contact: {
-            name: "MTDOJRP Discord",
+            name: "KCDOJRP Discord",
             url: "https://discord.gg/vBymThYS88",
           },
         },
@@ -168,7 +168,7 @@ export class Server {
       return res
         .status(200)
         .send(
-          `<html><head><title>MTDOJRP API</title></head><body>Why are you here? Anyway have a cookie 🍪!<br><br>200 Success. Current CAD Version: ${versions?.currentVersion} - ${versions?.currentCommitHash}<br><br></body></html>`,
+          `<html><head><title>KCDOJRP API</title></head><body>Why are you here? Anyway have a cookie 🍪!<br><br>200 Success. Current CAD Version: ${versions?.currentVersion} - ${versions?.currentCommitHash}<br><br></body></html>`,
         );
     };
   }

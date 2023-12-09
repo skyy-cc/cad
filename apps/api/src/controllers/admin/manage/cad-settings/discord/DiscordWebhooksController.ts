@@ -106,7 +106,7 @@ export class DiscordWebhooksController {
     @BodyParams() body: unknown,
     @Context("sessionUserId") sessionUserId: string,
   ): Promise<APITypes.PostCADDiscordWebhooksData> {
-    const name = cad.name || "MTDOJRP";
+    const name = cad.name || "KCDOJRP";
 
     if (!guildId) {
       throw new BadRequest("mustSetBotTokenGuildId");

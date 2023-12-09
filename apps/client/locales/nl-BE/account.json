@@ -53,7 +53,7 @@
     "otherSounds": "Andere geluiden",
     "unavailableSounds": "Onbeschikbare geluiden",
     "unavailableSoundsMessage": "Deze geluiden zijn niet beschikbaar. Ze moeten worden toegevoegd door een admin.",
-    "userApiTokenDescription": "Dit token kan worden gebruikt om te communiceren met de API van MTDOJRP."
+    "userApiTokenDescription": "Dit token kan worden gebruikt om te communiceren met de API van KCDOJRP."
   },
   "Notifications": {
     "CITIZEN_DELETED": "<span>{citizen}</span> is verwijderd. Reden: {reason}"
